@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia Atual</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #data { font-size: 2em; color: #2d72d9; }
+    </style>
+</head>
+<body>
+    <h1>Hoje é:</h1>
+    <div id="data"></div>
+    <script>
+        const hoje = new Date();
+        const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('data').textContent = hoje.toLocaleDateString('pt-BR', opcoes);
+    </script>
+</body>
+</html>
